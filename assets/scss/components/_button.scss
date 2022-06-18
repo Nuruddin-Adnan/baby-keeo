@@ -1,0 +1,15 @@
+.button {
+	color: #fff;
+	font-size: 20px;
+	overflow: hidden;
+	line-height: 24px;
+	position: relative;
+	padding: 10px 36px;
+	border-radius: 30px;
+	text-transform: capitalize;
+	background-color: $primary;
+
+	&:hover {
+		color: #fff;
+	}
+}

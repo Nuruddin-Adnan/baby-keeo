@@ -1,0 +1,20 @@
+.feature {
+	padding: 100px 0px;
+	background-color: #fff7ec;
+
+	&-content {
+		gap: 24px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+
+		@include max(991px) {
+			row-gap: 75px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max(575px) {
+			// row-gap: 60px;
+			grid-template-columns: 1fr;
+		}
+	}
+}

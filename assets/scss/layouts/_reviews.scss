@@ -1,0 +1,128 @@
+.reviews {
+	overflow: hidden;
+	position: relative;
+	padding: 100px 0px;
+	padding-bottom: 60px;
+	background-color: #fff7ec;
+
+	.heading {
+		color: #000;
+		font-size: 40px;
+		text-align: center;
+		line-height: 46.88px;
+		text-transform: capitalize;
+
+		@include max(767px) {
+			font-size: 30px;
+			line-height: 35.16px;
+		}
+
+		span {
+			color: $primary;
+		}
+	}
+
+	&-content {
+		width: 100%;
+		position: relative;
+
+		.swiper-button {
+			&-prev,
+			&-next {
+				position: absolute;
+				top: calc(50% + 30px);
+				transform: translateY(-50%);
+
+				@include max(1200px) {
+					top: auto;
+					bottom: -40px;
+				}
+			}
+
+			&-prev {
+				left: -50px;
+				@include max(1200px) {
+					left: 45%;
+				}
+				@include max(991px) {
+					left: 42%;
+				}
+				@include max(767px) {
+					left: 40%;
+				}
+
+				@include max(480px) {
+					left: calc(40% - 15px);
+				}
+			}
+
+			&-next {
+				right: -70px;
+				@include max(1200px) {
+					right: 45%;
+				}
+				@include max(991px) {
+					right: 45%;
+				}
+				@include max(767px) {
+					right: 40%;
+				}
+
+				@include max(480px) {
+					right: calc(40% - 20px);
+				}
+			}
+		}
+	}
+
+	.swiper {
+		&-wrapper {
+			display: flex;
+		}
+
+		&-button {
+			&-prev,
+			&-next {
+				width: 40px;
+				height: 40px;
+				display: flex;
+				border-radius: 50%;
+				user-select: none;
+				align-items: center;
+				justify-content: center;
+				background-color: $primary;
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		&-slide {
+			padding: 40px 0px;
+			padding-left: 24px;
+
+			@include max(767px) {
+				padding-left: 0px;
+			}
+
+			&-active {
+				.review-card {
+					border-color: transparent;
+					box-shadow: 0px 17px 32px 0px rgba(40, 40, 40, 0.08);
+				}
+			}
+		}
+	}
+
+	.overlay-one {
+		top: 0;
+		right: 0;
+		user-select: none;
+		pointer-events: none;
+		position: absolute;
+
+		@include max(1200px) {
+			display: none;
+		}
+	}
+}

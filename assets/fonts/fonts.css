@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "Linotte-bold";
+	src: url("Linotte\ Bold.otf");
+}
+
+@font-face {
+	font-family: "Linotte-heavy";
+	src: url("Linotte\ Heavy.otf");
+}
+
+@font-face {
+	font-family: "Linotte-light";
+	src: url("Linotte\ Light.otf");
+}
+
+@font-face {
+	font-family: "Linotte-regular";
+	src: url("Linotte\ Regular.otf");
+}
+
+@font-face {
+	font-family: "Linotte-sbold";
+	src: url("Linotte\ Semi\ Bold.otf");
+}

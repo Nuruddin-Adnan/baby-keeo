@@ -1,0 +1,103 @@
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	position: fixed;
+	border-radius: 0px;
+	backdrop-filter: blur(5.5px);
+	-webkit-backdrop-filter: blur(5.5px);
+	background: rgba(255, 255, 255, 0.05);
+
+	&.sticky {
+		.navbar {
+			padding: 0px;
+		}
+	}
+
+	&.two {
+		background-color: #fff7ec;
+	}
+
+	&-action {
+		display: flex;
+		align-items: center;
+
+		a {
+			margin-right: 24px;
+
+			&.button {
+				font-size: 16px;
+				padding: 10px 26px;
+				line-height: 18.75px;
+
+				@include max(767px) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.navbar {
+		padding: 10px 0px;
+		transition: all 0.3s linear;
+
+		&-toggler {
+			border: 0;
+			padding: 0;
+			border-radius: 0px;
+			&:focus {
+				outline: none;
+				box-shadow: none;
+			}
+		}
+
+		&-collapse {
+			padding: 0px 12px;
+
+			@include max(991px) {
+				background: rgba(255, 255, 255, 0.05);
+				backdrop-filter: blur(5.5px);
+				-webkit-backdrop-filter: blur(5.5px);
+				border-radius: 10px;
+			}
+
+			.header-action {
+				@include max(991px) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.nav {
+		&-item {
+			margin-right: 30px;
+
+			@include max(991px) {
+				margin: 0;
+			}
+		}
+
+		&-link {
+			font-size: 18px;
+			line-height: 21.09px;
+			padding: 0 !important;
+			color: #000 !important;
+			text-transform: capitalize;
+
+			&:hover {
+				color: $primary !important;
+			}
+
+			@include max(991px) {
+				padding: 8px 0px !important;
+			}
+
+			&.active {
+				color: $primary !important;
+				font-family: "Linotte-sbold";
+			}
+		}
+	}
+}
