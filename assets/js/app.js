@@ -74,12 +74,11 @@ if (document.querySelector(".product-slider")) {
 	var swiper = new Swiper(".product-slider", {
 		// loop: true,
 		spaceBetween: 8,
-		slidesPerView: 2,
+		slidesPerView: 4,
 		watchSlidesProgress: false,
 		breakpoints: {
 			480: {
-				spaceBetween: 6,
-				slidesPerView: 3,
+				spaceBetween: 10,
 			},
 
 			992: {
